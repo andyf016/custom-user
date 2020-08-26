@@ -1,0 +1,22 @@
+<a href="/login">Login</a>  |  <a href="/signup">Sign Up</a>
+<br>
+{% if request.user.is_authenticated %}
+Hi {{ user.username }}! Also Known As: {{ user.display_name }}
+<br>
+Some personal Info:
+You are {{user.age}} years old
+<br>
+Your Homepage is: {{user.homepage}}
+<br>
+
+The  output the value of `settings.AUTH_USER_MODEL` is:
+{{the_settings}}
+<br>
+<a href="/logout">Logout</a>
+{% endif %}
+<br>
+
+
+<br>
+
+
